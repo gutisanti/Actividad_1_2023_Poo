@@ -121,7 +121,44 @@ for numero in range(1, 11):
     print(numero)
 
 #punto 13
+def calcular_operaciones(num1, num2):
+    suma = num1 + num2
+    resta = num1 - num2
+    multiplicacion = num1 * num2
+    division = num1 / num2
+    return suma, resta, multiplicacion, division
+
+numero1 = float(input("Ingresa el primer número: "))
+numero2 = float(input("Ingresa el segundo número: "))
+
+resultado_suma, resultado_resta, resultado_multiplicacion, resultado_division = calcular_operaciones(numero1, numero2)
+
+print("Suma:", resultado_suma)
+print("Resta:", resultado_resta)
+print("Multiplicación:", resultado_multiplicacion)
+print("División:", resultado_division)
+
 #punto 14
+def calcular_media(lista):
+    if not lista:
+        return None
+    suma = sum(lista)
+    media = suma / len(lista)
+    return media
+
+lista_numeros = [10, 20, 30, 40, 50]
+media = calcular_media(lista_numeros)
+print("La media aritmética de la lista es:", media)
+
 #punto 15
+def es_palindromo(cadena):
+    cadena = cadena.lower().replace(" ", "")
+    return cadena == cadena[::-1]
+
+texto = input("Ingresa una cadena de texto: ")
+if es_palindromo(texto):
+    print("Es un palíndromo.")
+else:
+    print("No es un palíndromo.")
 
     
